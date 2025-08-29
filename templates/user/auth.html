@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="flex justify-center">
+    <form action="/user/login/" method="post" id="login" class="auth_form">
+        {% csrf_token %}
+        <img class="hidden md:block lg:block w-xl h-fit"
+            src="https://img.freepik.com/free-photo/3d-hand-hold-smartphone-with-authentication-form_107791-16570.jpg"
+            alt="">
+        <div class="flex flex-col max-w-md w-full p-4 gap-4">
+            <h2 class="text-xl">Log in</h2>
+            <input type="email" class="input" name="email" placeholder="Email" required>
+            <input type="password" class="input" name="password" placeholder="Password" required>
+            <p>Don't have an account?&nbsp;<a href="javascript:void(0)" id="showSignup" class="underline">Sign up</a>
+            </p>
+            <button type="submit" class="auth_btn">Log In</button>
+        </div>
+    </form>
+
+    <form action="/user/signup/" id="signup" method="post" class="auth_form" style="display: none;">
+        {% csrf_token %}
+        <img class="hidden md:block lg:block w-xl h-fit"
+            src="https://img.freepik.com/free-photo/3d-render-secure-login-password-illustration_107791-16640.jpg"
+            alt="">
+        <div class="flex flex-col max-w-md w-full p-4 gap-4">
+            <h1 class="text-xl">Sign up</h1>
+            <input type="text" class="input" name="first_name" placeholder="First Name" required>
+            <input type="text" class="input" name="last_name" placeholder="Last Name" required>
+            <input type="email" class="input" name="email" placeholder="Email" required>
+            <input type="password" class="input" name="password" placeholder="Password" required>
+            <input type="password" class="input" name="password" placeholder="Confirm Password" required>
+            <p>Already have an account?&nbsp;<a href="javascript:void(0)" id="showLogin" class="underline">Log in</a>
+            </p>
+            <button type="submit" class="auth_btn">Sign Up</button>
+        </div>
+    </form>
+
+    <script>
+        const login = document.getElementById('login');
+        const signup = document.getElementById('signup');
+        const showSignup = document.getElementById('showSignup');
+        const showLogin = document.getElementById('showLogin');
+
+        showSignup.addEventListener('click', () => {
+            login.style.display = 'none';
+            signup.style.display = 'flex';
+        });
+
+        showLogin.addEventListener('click', () => {
+            login.style.display = 'flex';
+            signup.style.display = 'none';
+        });
+    </script>
+</div>
+{% if message %}
+<div id="box" class="w-full flex justify-center">
+    <div class="bg-orange-100 max-w-xl w-full border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+        <p class="font-bold">{{message}}</p>
+    </div>
+</div>
+<script>
+    setTimeout(() => {
+      const elem = document.getElementById("box");
+      if (elem) {
+        elem.remove();
+      }
+    }, 3000);
+  </script>
+{% endif %}
+</div>
+{% endblock content %}

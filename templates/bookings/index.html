@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<h1 class="text-center text-2xl font-semibold">Your Bookings</h1>
+
+<div class="mb-4 flex justify-center w-full">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab"
+        data-tabs-toggle="#default-styled-tab-content"
+        data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
+        data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+        role="tablist">
+        <li class="me-2 cursor-pointer" role="presentation">
+            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab"
+                data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile"
+                aria-selected="false">Current</button>
+        </li>
+        <li class="me-2 cursor-pointer" role="presentation">
+            <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab"
+                aria-controls="dashboard" aria-selected="false">Previous</button>
+        </li>
+        <li class="me-2 cursor-pointer" role="presentation">
+            <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab"
+                aria-controls="settings" aria-selected="false">Cancelled</button>
+        </li>
+    </ul>
+</div>
+<div id="default-styled-tab-content">
+    <div class="hidden p-4 rounded-lg " id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {% for i in bookings %}
+            <div class="flex flex-col p-4 shadow-2xl rounded-2xl">
+                {% if i.travel_option.type == 'Bus'%}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg viewBox="0 0 24 24" height="20px" width="20px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3 4C1.34315 4 0 5.34315 0 7V14C0 15.3121 0.842366 16.4275 2.01581 16.8348C2.18436 18.6108 3.67994 20 5.5 20C7.26324 20 8.72194 18.6961 8.96456 17H15.0354C15.2781 18.6961 16.7368 20 18.5 20C20.3201 20 21.8156 18.6108 21.9842 16.8348C23.1576 16.4275 24 15.3121 24 14V10.2935C24 10.0016 23.9574 9.71115 23.8735 9.43149L22.8854 6.13796C22.5047 4.869 21.3368 4 20.0119 4H3ZM4 16.4361V16.5639C4.03348 17.3634 4.69224 18.0013 5.5 18.0013C6.30776 18.0013 6.96652 17.3634 7 16.5639V16.4361C6.96652 15.6366 6.30776 14.9987 5.5 14.9987C4.69224 14.9987 4.03348 15.6366 4 16.4361ZM5.5 13C6.8962 13 8.10145 13.8175 8.66318 15H15.3368C15.8985 13.8175 17.1038 13 18.5 13C19.8245 13 20.9771 13.7357 21.5716 14.8207C21.8306 14.64 22 14.3398 22 14V10.2935C22 10.1962 21.9858 10.0994 21.9578 10.0062L21.956 10H18C16.8954 10 16 9.10457 16 8V6H3C2.44772 6 2 6.44772 2 7V14C2 14.3398 2.16945 14.64 2.42845 14.8207C3.02292 13.7357 4.17555 13 5.5 13ZM18 6V7C18 7.55228 18.4477 8 19 8H21.356L20.9698 6.71265C20.8429 6.28967 20.4535 6 20.0119 6H18ZM17 16.4361V16.5639C17.0335 17.3634 17.6922 18.0013 18.5 18.0013C19.3078 18.0013 19.9665 17.3634 20 16.5639V16.4361C19.9665 15.6366 19.3078 14.9987 18.5 14.9987C17.6922 14.9987 17.0335 15.6366 17 16.4361Z"
+                            fill="#0F0F0F"></path>
+                    </svg>
+                </div>
+                {% elif i.travel_option.type == 'Train' %}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                        fill="#000000">
+                        <path class="st0"
+                            d="M431.665,356.848V147.207c0-48.019-38.916-86.944-86.943-86.944h-40.363l4.812-42.824h8.813 c9.435,0,17.508,5.74,20.965,13.898l16.06-6.779V24.55C348.929,10.124,334.641,0.018,317.984,0L193.999,0.009 c-16.639,0.009-30.928,10.116-37.016,24.541l16.06,6.796c3.466-8.166,11.539-13.906,20.956-13.897h8.823l4.81,42.815h-40.354 c-48.01,0-86.942,38.924-86.942,86.944v209.641c0,36.403,26.483,66.736,61.208,72.773L87.011,512h48.488l22.378-33.823h196.264 L376.519,512h48.47l-54.516-82.379C405.182,423.576,431.665,393.252,431.665,356.848z M291.621,17.44l-4.803,42.824h-61.635 l-4.819-42.815L291.621,17.44z M180.715,99.299h150.57v25.095h-150.57V99.299z M135.413,180.409 c0-10.917,8.839-19.773,19.756-19.773h201.664c10.916,0,19.773,8.856,19.773,19.773v65.96c0,10.917-8.857,19.764-19.773,19.764 H155.168c-10.916,0-19.756-8.847-19.756-19.764V180.409z M154.232,378.495c-12.739,0-23.06-10.321-23.06-23.043 c0-12.739,10.321-23.052,23.06-23.052c12.722,0,23.043,10.313,23.043,23.052C177.275,368.174,166.954,378.495,154.232,378.495z M172.421,456.19l16.844-25.461h133.471l16.844,25.461H172.421z M357.768,378.495c-12.722,0-23.043-10.321-23.043-23.043 c0-12.739,10.321-23.052,23.043-23.052c12.739,0,23.06,10.313,23.06,23.052C380.828,368.174,370.507,378.495,357.768,378.495z">
+                        </path>
+                    </svg>
+                </div>
+                {% else %}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg viewBox="0 0 24 24" height="20px" width="20px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.5 4.5C17.3284 3.67157 18.6716 3.67157 19.5 4.5V4.5C20.3284 5.32843 20.3284 6.67157 19.5 7.5L17 10L18.8633 17.4361C18.9482 17.7749 18.8501 18.1335 18.6046 18.382L18.3626 18.6269C17.9174 19.0776 17.1706 19.0059 16.8192 18.4788L13.5 13.5L9.5 17.5V19.5858C9.5 19.851 9.39464 20.1054 9.20711 20.2929L8.92578 20.5742C8.45953 21.0405 7.67757 20.9357 7.35043 20.3633L6 18L3.63675 16.6496C3.06425 16.3224 2.95953 15.5405 3.42578 15.0742L3.70711 14.7929C3.89464 14.6054 4.149 14.5 4.41421 14.5H6.5L10.5 10.5L5.52125 7.18083C4.99413 6.82942 4.92247 6.08263 5.37316 5.63739L5.61816 5.39535C5.86664 5.14987 6.2252 5.05183 6.56401 5.13673L14 7L16.5 4.5Z"
+                            stroke="#000000" stroke-width="2"></path>
+                    </svg>
+                </div>
+                {% endif %}
+                <div>
+                    <h1 class="text-xl">
+                        from&nbsp;{{i.travel_option.source}}&nbsp;to&nbsp;{{i.travel_option.destination}}</h1>
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold">${{i.total_price}}</h1>
+                </div>
+                <div>
+                    Booked Seats: {{i.number_of_seats}}
+                </div>
+                <div>Booking Date: {{i.booking_date}}</div>
+                <a href="/bookings/cancel/?id={{i.id}}" class="cancel_btn" hx-boost="false">
+                    Cancel
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="hidden p-4 rounded-lg" id="styled-dashboard" role="tabpanel"
+        aria-labelledby="dashboard-tab">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {% for i in previous %}
+            <div class="flex flex-col p-4 shadow-2xl rounded-2xl">
+                {% if i.travel_option.type == 'Bus'%}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg viewBox="0 0 24 24" height="20px" width="20px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3 4C1.34315 4 0 5.34315 0 7V14C0 15.3121 0.842366 16.4275 2.01581 16.8348C2.18436 18.6108 3.67994 20 5.5 20C7.26324 20 8.72194 18.6961 8.96456 17H15.0354C15.2781 18.6961 16.7368 20 18.5 20C20.3201 20 21.8156 18.6108 21.9842 16.8348C23.1576 16.4275 24 15.3121 24 14V10.2935C24 10.0016 23.9574 9.71115 23.8735 9.43149L22.8854 6.13796C22.5047 4.869 21.3368 4 20.0119 4H3ZM4 16.4361V16.5639C4.03348 17.3634 4.69224 18.0013 5.5 18.0013C6.30776 18.0013 6.96652 17.3634 7 16.5639V16.4361C6.96652 15.6366 6.30776 14.9987 5.5 14.9987C4.69224 14.9987 4.03348 15.6366 4 16.4361ZM5.5 13C6.8962 13 8.10145 13.8175 8.66318 15H15.3368C15.8985 13.8175 17.1038 13 18.5 13C19.8245 13 20.9771 13.7357 21.5716 14.8207C21.8306 14.64 22 14.3398 22 14V10.2935C22 10.1962 21.9858 10.0994 21.9578 10.0062L21.956 10H18C16.8954 10 16 9.10457 16 8V6H3C2.44772 6 2 6.44772 2 7V14C2 14.3398 2.16945 14.64 2.42845 14.8207C3.02292 13.7357 4.17555 13 5.5 13ZM18 6V7C18 7.55228 18.4477 8 19 8H21.356L20.9698 6.71265C20.8429 6.28967 20.4535 6 20.0119 6H18ZM17 16.4361V16.5639C17.0335 17.3634 17.6922 18.0013 18.5 18.0013C19.3078 18.0013 19.9665 17.3634 20 16.5639V16.4361C19.9665 15.6366 19.3078 14.9987 18.5 14.9987C17.6922 14.9987 17.0335 15.6366 17 16.4361Z"
+                            fill="#0F0F0F"></path>
+                    </svg>
+                </div>
+                {% elif i.travel_option.type == 'Train' %}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                        fill="#000000">
+                        <path class="st0"
+                            d="M431.665,356.848V147.207c0-48.019-38.916-86.944-86.943-86.944h-40.363l4.812-42.824h8.813 c9.435,0,17.508,5.74,20.965,13.898l16.06-6.779V24.55C348.929,10.124,334.641,0.018,317.984,0L193.999,0.009 c-16.639,0.009-30.928,10.116-37.016,24.541l16.06,6.796c3.466-8.166,11.539-13.906,20.956-13.897h8.823l4.81,42.815h-40.354 c-48.01,0-86.942,38.924-86.942,86.944v209.641c0,36.403,26.483,66.736,61.208,72.773L87.011,512h48.488l22.378-33.823h196.264 L376.519,512h48.47l-54.516-82.379C405.182,423.576,431.665,393.252,431.665,356.848z M291.621,17.44l-4.803,42.824h-61.635 l-4.819-42.815L291.621,17.44z M180.715,99.299h150.57v25.095h-150.57V99.299z M135.413,180.409 c0-10.917,8.839-19.773,19.756-19.773h201.664c10.916,0,19.773,8.856,19.773,19.773v65.96c0,10.917-8.857,19.764-19.773,19.764 H155.168c-10.916,0-19.756-8.847-19.756-19.764V180.409z M154.232,378.495c-12.739,0-23.06-10.321-23.06-23.043 c0-12.739,10.321-23.052,23.06-23.052c12.722,0,23.043,10.313,23.043,23.052C177.275,368.174,166.954,378.495,154.232,378.495z M172.421,456.19l16.844-25.461h133.471l16.844,25.461H172.421z M357.768,378.495c-12.722,0-23.043-10.321-23.043-23.043 c0-12.739,10.321-23.052,23.043-23.052c12.739,0,23.06,10.313,23.06,23.052C380.828,368.174,370.507,378.495,357.768,378.495z">
+                        </path>
+                    </svg>
+                </div>
+                {% else %}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg viewBox="0 0 24 24" height="20px" width="20px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.5 4.5C17.3284 3.67157 18.6716 3.67157 19.5 4.5V4.5C20.3284 5.32843 20.3284 6.67157 19.5 7.5L17 10L18.8633 17.4361C18.9482 17.7749 18.8501 18.1335 18.6046 18.382L18.3626 18.6269C17.9174 19.0776 17.1706 19.0059 16.8192 18.4788L13.5 13.5L9.5 17.5V19.5858C9.5 19.851 9.39464 20.1054 9.20711 20.2929L8.92578 20.5742C8.45953 21.0405 7.67757 20.9357 7.35043 20.3633L6 18L3.63675 16.6496C3.06425 16.3224 2.95953 15.5405 3.42578 15.0742L3.70711 14.7929C3.89464 14.6054 4.149 14.5 4.41421 14.5H6.5L10.5 10.5L5.52125 7.18083C4.99413 6.82942 4.92247 6.08263 5.37316 5.63739L5.61816 5.39535C5.86664 5.14987 6.2252 5.05183 6.56401 5.13673L14 7L16.5 4.5Z"
+                            stroke="#000000" stroke-width="2"></path>
+                    </svg>
+                </div>
+                {% endif %}
+                <div>
+                    <h1 class="text-xl">
+                        from&nbsp;{{i.travel_option.source}}&nbsp;to&nbsp;{{i.travel_option.destination}}</h1>
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold">${{i.total_price}}</h1>
+                </div>
+                <div>
+                    Booked Seats: {{i.number_of_seats}}
+                </div>
+                <div>Booking Date: {{i.booking_date}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="hidden p-4 rounded-lg" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {% for i in cancelled %}
+            <div class="flex flex-col p-4 shadow-2xl rounded-2xl">
+                {% if i.travel_option.type == 'Bus'%}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg viewBox="0 0 24 24" height="20px" width="20px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3 4C1.34315 4 0 5.34315 0 7V14C0 15.3121 0.842366 16.4275 2.01581 16.8348C2.18436 18.6108 3.67994 20 5.5 20C7.26324 20 8.72194 18.6961 8.96456 17H15.0354C15.2781 18.6961 16.7368 20 18.5 20C20.3201 20 21.8156 18.6108 21.9842 16.8348C23.1576 16.4275 24 15.3121 24 14V10.2935C24 10.0016 23.9574 9.71115 23.8735 9.43149L22.8854 6.13796C22.5047 4.869 21.3368 4 20.0119 4H3ZM4 16.4361V16.5639C4.03348 17.3634 4.69224 18.0013 5.5 18.0013C6.30776 18.0013 6.96652 17.3634 7 16.5639V16.4361C6.96652 15.6366 6.30776 14.9987 5.5 14.9987C4.69224 14.9987 4.03348 15.6366 4 16.4361ZM5.5 13C6.8962 13 8.10145 13.8175 8.66318 15H15.3368C15.8985 13.8175 17.1038 13 18.5 13C19.8245 13 20.9771 13.7357 21.5716 14.8207C21.8306 14.64 22 14.3398 22 14V10.2935C22 10.1962 21.9858 10.0994 21.9578 10.0062L21.956 10H18C16.8954 10 16 9.10457 16 8V6H3C2.44772 6 2 6.44772 2 7V14C2 14.3398 2.16945 14.64 2.42845 14.8207C3.02292 13.7357 4.17555 13 5.5 13ZM18 6V7C18 7.55228 18.4477 8 19 8H21.356L20.9698 6.71265C20.8429 6.28967 20.4535 6 20.0119 6H18ZM17 16.4361V16.5639C17.0335 17.3634 17.6922 18.0013 18.5 18.0013C19.3078 18.0013 19.9665 17.3634 20 16.5639V16.4361C19.9665 15.6366 19.3078 14.9987 18.5 14.9987C17.6922 14.9987 17.0335 15.6366 17 16.4361Z"
+                            fill="#0F0F0F"></path>
+                    </svg>
+                </div>
+                {% elif i.travel_option.type == 'Train' %}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                        fill="#000000">
+                        <path class="st0"
+                            d="M431.665,356.848V147.207c0-48.019-38.916-86.944-86.943-86.944h-40.363l4.812-42.824h8.813 c9.435,0,17.508,5.74,20.965,13.898l16.06-6.779V24.55C348.929,10.124,334.641,0.018,317.984,0L193.999,0.009 c-16.639,0.009-30.928,10.116-37.016,24.541l16.06,6.796c3.466-8.166,11.539-13.906,20.956-13.897h8.823l4.81,42.815h-40.354 c-48.01,0-86.942,38.924-86.942,86.944v209.641c0,36.403,26.483,66.736,61.208,72.773L87.011,512h48.488l22.378-33.823h196.264 L376.519,512h48.47l-54.516-82.379C405.182,423.576,431.665,393.252,431.665,356.848z M291.621,17.44l-4.803,42.824h-61.635 l-4.819-42.815L291.621,17.44z M180.715,99.299h150.57v25.095h-150.57V99.299z M135.413,180.409 c0-10.917,8.839-19.773,19.756-19.773h201.664c10.916,0,19.773,8.856,19.773,19.773v65.96c0,10.917-8.857,19.764-19.773,19.764 H155.168c-10.916,0-19.756-8.847-19.756-19.764V180.409z M154.232,378.495c-12.739,0-23.06-10.321-23.06-23.043 c0-12.739,10.321-23.052,23.06-23.052c12.722,0,23.043,10.313,23.043,23.052C177.275,368.174,166.954,378.495,154.232,378.495z M172.421,456.19l16.844-25.461h133.471l16.844,25.461H172.421z M357.768,378.495c-12.722,0-23.043-10.321-23.043-23.043 c0-12.739,10.321-23.052,23.043-23.052c12.739,0,23.06,10.313,23.06,23.052C380.828,368.174,370.507,378.495,357.768,378.495z">
+                        </path>
+                    </svg>
+                </div>
+                {% else %}
+                <div class="inline-flex gap-2 justify-self-end ml-auto">
+                    <svg viewBox="0 0 24 24" height="20px" width="20px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.5 4.5C17.3284 3.67157 18.6716 3.67157 19.5 4.5V4.5C20.3284 5.32843 20.3284 6.67157 19.5 7.5L17 10L18.8633 17.4361C18.9482 17.7749 18.8501 18.1335 18.6046 18.382L18.3626 18.6269C17.9174 19.0776 17.1706 19.0059 16.8192 18.4788L13.5 13.5L9.5 17.5V19.5858C9.5 19.851 9.39464 20.1054 9.20711 20.2929L8.92578 20.5742C8.45953 21.0405 7.67757 20.9357 7.35043 20.3633L6 18L3.63675 16.6496C3.06425 16.3224 2.95953 15.5405 3.42578 15.0742L3.70711 14.7929C3.89464 14.6054 4.149 14.5 4.41421 14.5H6.5L10.5 10.5L5.52125 7.18083C4.99413 6.82942 4.92247 6.08263 5.37316 5.63739L5.61816 5.39535C5.86664 5.14987 6.2252 5.05183 6.56401 5.13673L14 7L16.5 4.5Z"
+                            stroke="#000000" stroke-width="2"></path>
+                    </svg>
+                </div>
+                {% endif %}
+                <div>
+                    <h1 class="text-xl">
+                        from&nbsp;{{i.travel_option.source}}&nbsp;to&nbsp;{{i.travel_option.destination}}</h1>
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold">${{i.total_price}}</h1>
+                </div>
+                <div>
+                    Booked Seats: {{i.number_of_seats}}
+                </div>
+                <div>Booking Date: {{i.booking_date}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% else %}
+<script>
+    window.location.href = '/user/auth'
+</script>
+{% endif %}
+{% endblock content %}

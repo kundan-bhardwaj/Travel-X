@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+      <script>
+        window.location.href = '/'
+      </script>
+    {% else %}
+      <script>
+        window.location.href = '/user/auth'
+      </script>
+    {% endif %}
+</div>
+{% endblock content %}

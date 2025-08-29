@@ -1,0 +1,1202 @@
+[
+  {
+    "model": "travels.traveloption",
+    "pk": 1,
+    "fields": {
+      "type": "Train",
+      "source": "Venice",
+      "destination": "Singapore",
+      "date_time": "2025-10-30T10:00:00Z",
+      "price": "714.72",
+      "available_seats": 237
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 2,
+    "fields": {
+      "type": "Bus",
+      "source": "London",
+      "destination": "Seoul",
+      "date_time": "2025-10-19T13:00:00Z",
+      "price": "276.42",
+      "available_seats": 180
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 3,
+    "fields": {
+      "type": "Flight",
+      "source": "Cairo",
+      "destination": "Berlin",
+      "date_time": "2025-09-16T04:00:00Z",
+      "price": "362.45",
+      "available_seats": 268
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 4,
+    "fields": {
+      "type": "Train",
+      "source": "Madrid",
+      "destination": "Mumbai",
+      "date_time": "2025-10-12T09:00:00Z",
+      "price": "834.85",
+      "available_seats": 96
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 5,
+    "fields": {
+      "type": "Train",
+      "source": "Singapore",
+      "destination": "Paris",
+      "date_time": "2025-10-16T06:00:00Z",
+      "price": "918.67",
+      "available_seats": 144
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 6,
+    "fields": {
+      "type": "Flight",
+      "source": "Singapore",
+      "destination": "Barcelona",
+      "date_time": "2025-09-11T05:00:00Z",
+      "price": "34.1",
+      "available_seats": 124
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 7,
+    "fields": {
+      "type": "Train",
+      "source": "Cairo",
+      "destination": "Chicago",
+      "date_time": "2025-09-01T08:00:00Z",
+      "price": "882.13",
+      "available_seats": 142
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 8,
+    "fields": {
+      "type": "Bus",
+      "source": "London",
+      "destination": "Chicago",
+      "date_time": "2025-09-13T05:00:00Z",
+      "price": "98.41",
+      "available_seats": 29
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 9,
+    "fields": {
+      "type": "Bus",
+      "source": "Delhi",
+      "destination": "Toronto",
+      "date_time": "2025-10-13T05:00:00Z",
+      "price": "806.16",
+      "available_seats": 46
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 10,
+    "fields": {
+      "type": "Train",
+      "source": "Hong Kong",
+      "destination": "Los Angeles",
+      "date_time": "2025-09-21T05:00:00Z",
+      "price": "811.92",
+      "available_seats": 252
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 11,
+    "fields": {
+      "type": "Flight",
+      "source": "Berlin",
+      "destination": "Hong Kong",
+      "date_time": "2025-09-13T16:00:00Z",
+      "price": "720.8",
+      "available_seats": 80
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 12,
+    "fields": {
+      "type": "Flight",
+      "source": "Bangkok",
+      "destination": "Mumbai",
+      "date_time": "2025-09-16T11:00:00Z",
+      "price": "600.46",
+      "available_seats": 210
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 13,
+    "fields": {
+      "type": "Bus",
+      "source": "San Francisco",
+      "destination": "Istanbul",
+      "date_time": "2025-10-24T21:00:00Z",
+      "price": "567.91",
+      "available_seats": 284
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 14,
+    "fields": {
+      "type": "Flight",
+      "source": "Hong Kong",
+      "destination": "Toronto",
+      "date_time": "2025-10-12T06:00:00Z",
+      "price": "31.92",
+      "available_seats": 287
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 15,
+    "fields": {
+      "type": "Train",
+      "source": "Los Angeles",
+      "destination": "Dubai",
+      "date_time": "2025-10-31T22:00:00Z",
+      "price": "25.67",
+      "available_seats": 207
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 16,
+    "fields": {
+      "type": "Flight",
+      "source": "Mumbai",
+      "destination": "New York",
+      "date_time": "2025-10-25T15:00:00Z",
+      "price": "390.29",
+      "available_seats": 128
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 17,
+    "fields": {
+      "type": "Bus",
+      "source": "London",
+      "destination": "Los Angeles",
+      "date_time": "2025-10-17T17:00:00Z",
+      "price": "925.93",
+      "available_seats": 73
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 18,
+    "fields": {
+      "type": "Bus",
+      "source": "Berlin",
+      "destination": "Bangkok",
+      "date_time": "2025-10-28T06:00:00Z",
+      "price": "480.09",
+      "available_seats": 267
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 19,
+    "fields": {
+      "type": "Bus",
+      "source": "Los Angeles",
+      "destination": "Mumbai",
+      "date_time": "2025-10-20T06:00:00Z",
+      "price": "56.82",
+      "available_seats": 294
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 20,
+    "fields": {
+      "type": "Bus",
+      "source": "Madrid",
+      "destination": "Dubai",
+      "date_time": "2025-10-12T04:00:00Z",
+      "price": "244.69",
+      "available_seats": 84
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 21,
+    "fields": {
+      "type": "Bus",
+      "source": "Seoul",
+      "destination": "London",
+      "date_time": "2025-09-04T19:00:00Z",
+      "price": "936.19",
+      "available_seats": 245
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 22,
+    "fields": {
+      "type": "Train",
+      "source": "Venice",
+      "destination": "Dubai",
+      "date_time": "2025-09-12T12:00:00Z",
+      "price": "733.11",
+      "available_seats": 249
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 23,
+    "fields": {
+      "type": "Flight",
+      "source": "Sydney",
+      "destination": "Bangkok",
+      "date_time": "2025-09-25T05:00:00Z",
+      "price": "558.88",
+      "available_seats": 220
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 24,
+    "fields": {
+      "type": "Train",
+      "source": "Seoul",
+      "destination": "Cairo",
+      "date_time": "2025-09-29T16:00:00Z",
+      "price": "119.15",
+      "available_seats": 155
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 25,
+    "fields": {
+      "type": "Train",
+      "source": "Tokyo",
+      "destination": "Chicago",
+      "date_time": "2025-09-19T17:00:00Z",
+      "price": "887.88",
+      "available_seats": 28
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 26,
+    "fields": {
+      "type": "Flight",
+      "source": "Madrid",
+      "destination": "Dubai",
+      "date_time": "2025-10-09T13:00:00Z",
+      "price": "791.85",
+      "available_seats": 107
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 27,
+    "fields": {
+      "type": "Train",
+      "source": "Hong Kong",
+      "destination": "Los Angeles",
+      "date_time": "2025-09-19T07:00:00Z",
+      "price": "185.1",
+      "available_seats": 176
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 28,
+    "fields": {
+      "type": "Bus",
+      "source": "Paris",
+      "destination": "Toronto",
+      "date_time": "2025-09-02T19:00:00Z",
+      "price": "597.3",
+      "available_seats": 275
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 29,
+    "fields": {
+      "type": "Bus",
+      "source": "Hong Kong",
+      "destination": "Sydney",
+      "date_time": "2025-09-23T13:00:00Z",
+      "price": "757.06",
+      "available_seats": 110
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 30,
+    "fields": {
+      "type": "Train",
+      "source": "Sydney",
+      "destination": "New York",
+      "date_time": "2025-09-24T00:00:00Z",
+      "price": "606.02",
+      "available_seats": 56
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 31,
+    "fields": {
+      "type": "Bus",
+      "source": "Venice",
+      "destination": "London",
+      "date_time": "2025-09-02T14:00:00Z",
+      "price": "882.28",
+      "available_seats": 201
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 32,
+    "fields": {
+      "type": "Flight",
+      "source": "Madrid",
+      "destination": "Mumbai",
+      "date_time": "2025-10-09T09:00:00Z",
+      "price": "797.89",
+      "available_seats": 163
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 33,
+    "fields": {
+      "type": "Bus",
+      "source": "Venice",
+      "destination": "New York",
+      "date_time": "2025-09-01T21:00:00Z",
+      "price": "602.03",
+      "available_seats": 49
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 34,
+    "fields": {
+      "type": "Flight",
+      "source": "Mumbai",
+      "destination": "San Francisco",
+      "date_time": "2025-09-13T22:00:00Z",
+      "price": "434.0",
+      "available_seats": 23
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 35,
+    "fields": {
+      "type": "Train",
+      "source": "Hong Kong",
+      "destination": "Tokyo",
+      "date_time": "2025-09-25T17:00:00Z",
+      "price": "614.57",
+      "available_seats": 291
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 36,
+    "fields": {
+      "type": "Bus",
+      "source": "Hong Kong",
+      "destination": "Toronto",
+      "date_time": "2025-09-17T01:00:00Z",
+      "price": "989.66",
+      "available_seats": 175
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 37,
+    "fields": {
+      "type": "Train",
+      "source": "Berlin",
+      "destination": "Hong Kong",
+      "date_time": "2025-10-29T07:00:00Z",
+      "price": "203.52",
+      "available_seats": 68
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 38,
+    "fields": {
+      "type": "Train",
+      "source": "Chicago",
+      "destination": "Dubai",
+      "date_time": "2025-09-22T06:00:00Z",
+      "price": "102.69",
+      "available_seats": 110
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 39,
+    "fields": {
+      "type": "Flight",
+      "source": "Toronto",
+      "destination": "Paris",
+      "date_time": "2025-10-08T10:00:00Z",
+      "price": "546.2",
+      "available_seats": 122
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 40,
+    "fields": {
+      "type": "Bus",
+      "source": "Hong Kong",
+      "destination": "Bangkok",
+      "date_time": "2025-09-30T23:00:00Z",
+      "price": "727.19",
+      "available_seats": 207
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 41,
+    "fields": {
+      "type": "Flight",
+      "source": "Delhi",
+      "destination": "Bangkok",
+      "date_time": "2025-09-08T14:00:00Z",
+      "price": "989.44",
+      "available_seats": 282
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 42,
+    "fields": {
+      "type": "Train",
+      "source": "New York",
+      "destination": "Paris",
+      "date_time": "2025-10-25T12:00:00Z",
+      "price": "140.51",
+      "available_seats": 255
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 43,
+    "fields": {
+      "type": "Flight",
+      "source": "Chicago",
+      "destination": "Istanbul",
+      "date_time": "2025-09-07T05:00:00Z",
+      "price": "944.39",
+      "available_seats": 189
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 44,
+    "fields": {
+      "type": "Bus",
+      "source": "Mumbai",
+      "destination": "Rome",
+      "date_time": "2025-10-25T08:00:00Z",
+      "price": "629.54",
+      "available_seats": 61
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 45,
+    "fields": {
+      "type": "Flight",
+      "source": "Hong Kong",
+      "destination": "Chicago",
+      "date_time": "2025-10-21T23:00:00Z",
+      "price": "882.42",
+      "available_seats": 25
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 46,
+    "fields": {
+      "type": "Bus",
+      "source": "Mumbai",
+      "destination": "Hong Kong",
+      "date_time": "2025-09-10T07:00:00Z",
+      "price": "798.75",
+      "available_seats": 129
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 47,
+    "fields": {
+      "type": "Train",
+      "source": "Singapore",
+      "destination": "Mumbai",
+      "date_time": "2025-10-13T01:00:00Z",
+      "price": "297.05",
+      "available_seats": 293
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 48,
+    "fields": {
+      "type": "Bus",
+      "source": "Tokyo",
+      "destination": "Dubai",
+      "date_time": "2025-10-08T18:00:00Z",
+      "price": "547.48",
+      "available_seats": 24
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 49,
+    "fields": {
+      "type": "Train",
+      "source": "Bangkok",
+      "destination": "Toronto",
+      "date_time": "2025-09-20T20:00:00Z",
+      "price": "826.22",
+      "available_seats": 277
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 50,
+    "fields": {
+      "type": "Bus",
+      "source": "Singapore",
+      "destination": "London",
+      "date_time": "2025-10-06T22:00:00Z",
+      "price": "961.59",
+      "available_seats": 249
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 51,
+    "fields": {
+      "type": "Train",
+      "source": "Barcelona",
+      "destination": "Chicago",
+      "date_time": "2025-09-04T05:00:00Z",
+      "price": "670.24",
+      "available_seats": 146
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 52,
+    "fields": {
+      "type": "Train",
+      "source": "Dubai",
+      "destination": "Singapore",
+      "date_time": "2025-09-09T09:00:00Z",
+      "price": "694.45",
+      "available_seats": 59
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 53,
+    "fields": {
+      "type": "Bus",
+      "source": "Venice",
+      "destination": "Toronto",
+      "date_time": "2025-09-11T15:00:00Z",
+      "price": "639.64",
+      "available_seats": 190
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 54,
+    "fields": {
+      "type": "Bus",
+      "source": "Singapore",
+      "destination": "Berlin",
+      "date_time": "2025-09-12T07:00:00Z",
+      "price": "645.76",
+      "available_seats": 279
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 55,
+    "fields": {
+      "type": "Flight",
+      "source": "Venice",
+      "destination": "Madrid",
+      "date_time": "2025-10-24T16:00:00Z",
+      "price": "456.03",
+      "available_seats": 185
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 56,
+    "fields": {
+      "type": "Flight",
+      "source": "Chicago",
+      "destination": "Dubai",
+      "date_time": "2025-09-30T05:00:00Z",
+      "price": "935.89",
+      "available_seats": 99
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 57,
+    "fields": {
+      "type": "Flight",
+      "source": "New York",
+      "destination": "Singapore",
+      "date_time": "2025-09-08T18:00:00Z",
+      "price": "539.79",
+      "available_seats": 90
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 58,
+    "fields": {
+      "type": "Train",
+      "source": "Los Angeles",
+      "destination": "Delhi",
+      "date_time": "2025-10-20T23:00:00Z",
+      "price": "578.12",
+      "available_seats": 296
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 59,
+    "fields": {
+      "type": "Flight",
+      "source": "Bangkok",
+      "destination": "Cairo",
+      "date_time": "2025-10-23T03:00:00Z",
+      "price": "498.0",
+      "available_seats": 178
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 60,
+    "fields": {
+      "type": "Train",
+      "source": "Seoul",
+      "destination": "Bangkok",
+      "date_time": "2025-09-02T04:00:00Z",
+      "price": "69.42",
+      "available_seats": 204
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 61,
+    "fields": {
+      "type": "Bus",
+      "source": "Rome",
+      "destination": "Venice",
+      "date_time": "2025-10-06T20:00:00Z",
+      "price": "389.88",
+      "available_seats": 44
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 62,
+    "fields": {
+      "type": "Bus",
+      "source": "Cairo",
+      "destination": "New York",
+      "date_time": "2025-10-29T09:00:00Z",
+      "price": "88.58",
+      "available_seats": 58
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 63,
+    "fields": {
+      "type": "Bus",
+      "source": "Paris",
+      "destination": "Delhi",
+      "date_time": "2025-09-22T05:00:00Z",
+      "price": "464.79",
+      "available_seats": 246
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 64,
+    "fields": {
+      "type": "Flight",
+      "source": "Seoul",
+      "destination": "Rome",
+      "date_time": "2025-10-02T05:00:00Z",
+      "price": "417.05",
+      "available_seats": 168
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 65,
+    "fields": {
+      "type": "Bus",
+      "source": "Toronto",
+      "destination": "London",
+      "date_time": "2025-10-15T03:00:00Z",
+      "price": "31.32",
+      "available_seats": 189
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 66,
+    "fields": {
+      "type": "Train",
+      "source": "Hong Kong",
+      "destination": "Bangkok",
+      "date_time": "2025-09-05T11:00:00Z",
+      "price": "560.32",
+      "available_seats": 24
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 67,
+    "fields": {
+      "type": "Flight",
+      "source": "Bangkok",
+      "destination": "Paris",
+      "date_time": "2025-10-10T15:00:00Z",
+      "price": "354.83",
+      "available_seats": 216
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 68,
+    "fields": {
+      "type": "Train",
+      "source": "Mumbai",
+      "destination": "Tokyo",
+      "date_time": "2025-09-12T04:00:00Z",
+      "price": "275.49",
+      "available_seats": 280
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 69,
+    "fields": {
+      "type": "Train",
+      "source": "Los Angeles",
+      "destination": "Chicago",
+      "date_time": "2025-10-22T04:00:00Z",
+      "price": "830.58",
+      "available_seats": 143
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 70,
+    "fields": {
+      "type": "Flight",
+      "source": "Istanbul",
+      "destination": "Chicago",
+      "date_time": "2025-10-30T12:00:00Z",
+      "price": "850.59",
+      "available_seats": 221
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 71,
+    "fields": {
+      "type": "Train",
+      "source": "Rome",
+      "destination": "Toronto",
+      "date_time": "2025-10-06T05:00:00Z",
+      "price": "65.39",
+      "available_seats": 53
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 72,
+    "fields": {
+      "type": "Flight",
+      "source": "Venice",
+      "destination": "Dubai",
+      "date_time": "2025-09-03T14:00:00Z",
+      "price": "798.55",
+      "available_seats": 103
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 73,
+    "fields": {
+      "type": "Train",
+      "source": "London",
+      "destination": "Berlin",
+      "date_time": "2025-09-26T08:00:00Z",
+      "price": "490.47",
+      "available_seats": 300
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 74,
+    "fields": {
+      "type": "Flight",
+      "source": "Barcelona",
+      "destination": "Delhi",
+      "date_time": "2025-09-08T12:00:00Z",
+      "price": "150.66",
+      "available_seats": 222
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 75,
+    "fields": {
+      "type": "Train",
+      "source": "Mumbai",
+      "destination": "Dubai",
+      "date_time": "2025-10-04T04:00:00Z",
+      "price": "846.56",
+      "available_seats": 214
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 76,
+    "fields": {
+      "type": "Train",
+      "source": "Istanbul",
+      "destination": "Dubai",
+      "date_time": "2025-10-09T14:00:00Z",
+      "price": "232.31",
+      "available_seats": 252
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 77,
+    "fields": {
+      "type": "Flight",
+      "source": "Tokyo",
+      "destination": "Chicago",
+      "date_time": "2025-10-20T05:00:00Z",
+      "price": "839.21",
+      "available_seats": 213
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 78,
+    "fields": {
+      "type": "Train",
+      "source": "New York",
+      "destination": "Venice",
+      "date_time": "2025-09-19T22:00:00Z",
+      "price": "988.98",
+      "available_seats": 138
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 79,
+    "fields": {
+      "type": "Flight",
+      "source": "Bangkok",
+      "destination": "Mumbai",
+      "date_time": "2025-10-21T23:00:00Z",
+      "price": "190.66",
+      "available_seats": 131
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 80,
+    "fields": {
+      "type": "Flight",
+      "source": "Dubai",
+      "destination": "Venice",
+      "date_time": "2025-10-28T09:00:00Z",
+      "price": "113.93",
+      "available_seats": 138
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 81,
+    "fields": {
+      "type": "Flight",
+      "source": "London",
+      "destination": "Delhi",
+      "date_time": "2025-09-26T08:00:00Z",
+      "price": "109.87",
+      "available_seats": 101
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 82,
+    "fields": {
+      "type": "Train",
+      "source": "Chicago",
+      "destination": "Tokyo",
+      "date_time": "2025-10-14T04:00:00Z",
+      "price": "293.74",
+      "available_seats": 106
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 83,
+    "fields": {
+      "type": "Bus",
+      "source": "Delhi",
+      "destination": "Paris",
+      "date_time": "2025-10-08T04:00:00Z",
+      "price": "72.49",
+      "available_seats": 157
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 84,
+    "fields": {
+      "type": "Flight",
+      "source": "Toronto",
+      "destination": "Sydney",
+      "date_time": "2025-09-15T10:00:00Z",
+      "price": "525.6",
+      "available_seats": 222
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 85,
+    "fields": {
+      "type": "Bus",
+      "source": "Hong Kong",
+      "destination": "New York",
+      "date_time": "2025-09-14T07:00:00Z",
+      "price": "57.81",
+      "available_seats": 200
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 86,
+    "fields": {
+      "type": "Train",
+      "source": "Tokyo",
+      "destination": "Venice",
+      "date_time": "2025-10-12T21:00:00Z",
+      "price": "708.5",
+      "available_seats": 43
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 87,
+    "fields": {
+      "type": "Train",
+      "source": "Toronto",
+      "destination": "Los Angeles",
+      "date_time": "2025-10-02T06:00:00Z",
+      "price": "201.76",
+      "available_seats": 257
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 88,
+    "fields": {
+      "type": "Bus",
+      "source": "New York",
+      "destination": "Toronto",
+      "date_time": "2025-09-21T12:00:00Z",
+      "price": "934.34",
+      "available_seats": 274
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 89,
+    "fields": {
+      "type": "Bus",
+      "source": "Los Angeles",
+      "destination": "Berlin",
+      "date_time": "2025-09-19T07:00:00Z",
+      "price": "625.12",
+      "available_seats": 209
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 90,
+    "fields": {
+      "type": "Flight",
+      "source": "San Francisco",
+      "destination": "Rome",
+      "date_time": "2025-10-19T22:00:00Z",
+      "price": "357.28",
+      "available_seats": 153
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 91,
+    "fields": {
+      "type": "Train",
+      "source": "Madrid",
+      "destination": "San Francisco",
+      "date_time": "2025-10-06T13:00:00Z",
+      "price": "906.72",
+      "available_seats": 142
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 92,
+    "fields": {
+      "type": "Bus",
+      "source": "Los Angeles",
+      "destination": "Venice",
+      "date_time": "2025-09-03T21:00:00Z",
+      "price": "534.82",
+      "available_seats": 229
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 93,
+    "fields": {
+      "type": "Bus",
+      "source": "Delhi",
+      "destination": "Cairo",
+      "date_time": "2025-10-19T00:00:00Z",
+      "price": "189.07",
+      "available_seats": 188
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 94,
+    "fields": {
+      "type": "Flight",
+      "source": "Madrid",
+      "destination": "Sydney",
+      "date_time": "2025-09-04T00:00:00Z",
+      "price": "269.03",
+      "available_seats": 205
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 95,
+    "fields": {
+      "type": "Train",
+      "source": "Delhi",
+      "destination": "Dubai",
+      "date_time": "2025-09-03T17:00:00Z",
+      "price": "291.35",
+      "available_seats": 172
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 96,
+    "fields": {
+      "type": "Train",
+      "source": "Cairo",
+      "destination": "New York",
+      "date_time": "2025-10-22T09:00:00Z",
+      "price": "263.27",
+      "available_seats": 242
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 97,
+    "fields": {
+      "type": "Train",
+      "source": "Toronto",
+      "destination": "Dubai",
+      "date_time": "2025-09-13T02:00:00Z",
+      "price": "432.73",
+      "available_seats": 257
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 98,
+    "fields": {
+      "type": "Flight",
+      "source": "Barcelona",
+      "destination": "New York",
+      "date_time": "2025-10-16T02:00:00Z",
+      "price": "890.5",
+      "available_seats": 93
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 99,
+    "fields": {
+      "type": "Flight",
+      "source": "Barcelona",
+      "destination": "Cairo",
+      "date_time": "2025-09-28T02:00:00Z",
+      "price": "442.97",
+      "available_seats": 194
+    }
+  },
+  {
+    "model": "travels.traveloption",
+    "pk": 100,
+    "fields": {
+      "type": "Flight",
+      "source": "Rome",
+      "destination": "Chicago",
+      "date_time": "2025-10-06T21:00:00Z",
+      "price": "234.78",
+      "available_seats": 101
+    }
+  }
+]

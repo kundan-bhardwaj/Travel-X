@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="flex flex-col w-full items-center">
+    <form class="flex flex-col gap-2 p-2 items-center" hx-get="/travels/" hx-target="#results"
+        hx-trigger="change input delay:500ms from:input, change from:select">
+        <div class="inline-flex gap-2">
+            <input type="text" name="search" placeholder="Search travel options..." class="input" />
+            <button type="submit" class="bg-purple-500 px-2 text-white rounded-xl cursor-pointer hover:scale-105 active:scale-95">
+                <svg viewBox="0 0 512 512" width="30px" height="'30px" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>ionicons-v5-f</title><path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z" style="fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:32px"></path><line x1="338.29" y1="338.29" x2="448" y2="448" style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></line></g></svg>
+            </button>
+        </div>
+        <div class="book_btn md:hidden lg:hidden" onclick="showFilters()" >Filters</div>
+        <div id="filters" class="flex-wrap gap-2 hidden items-center md:flex lg:flex">
+            <select id="travel-type" name="type" class="input">
+                <option value="">__type__</option>
+                <option value="Flight">Flight</option>
+                <option value="Train">Train</option>
+                <option value="Bus">Bus</option>
+            </select>
+            <select id="source" name="source" class="input">
+                <option value="">__source__</option>
+                {% for i in sources %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+            <select id="destination" name="destination" class="input">
+                <option value="">__destination__</option>
+                {% for i in destinations %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+            <select id="date" name="date" class="input">
+                <option value="">__date & time__</option>
+                {% for i in dates %}
+                <option value="{{ i|date:'Y-m-d H:i:s' }}">{{ i|date:"M d, Y, h:i A" }}</option>
+                {% endfor %}
+            </select>
+            <button class="cancel_btn" onclick="reset()" type="submit">clear filters</button>
+        </div>
+    </form>
+    <div id="results" class="w-full p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {% include 'partials/travel-option.html' %}
+    </div>
+    <script>
+        const travel = document.getElementById("travel-type")
+        const source = document.getElementById("source")
+        const destination = document.getElementById("destination")
+        const date = document.getElementById("date")
+        function reset(){
+            travel.value = '__type__'
+            source.value = '__source__'
+            destination.value = '__destination__'
+            date.value = '__date & time__'
+        }
+        function showFilters(){
+            document.getElementById('filters').classList.remove('hidden')
+            document.getElementById('filters').classList.add('flex')
+        }
+    </script>
+</div>
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="h-full w-vw flex justify-center items-center p-4">
+    <div class="p-6 rounded-2xl shadow-2xl max-w-md w-full">
+        <form action="/bookings/post-book/" method="post" class=" flex flex-col gap-2">
+            {% csrf_token %}
+            <input type="text" hidden value={{travel_option.id}} name="travel_option">
+            <label for="no" class="block">Enter number of seats you want to book</label>
+            <input id="no" oninput="updateTotal()" type="text" class="input" placeholder="no. of seats" name="number_of_seats">
+            <input id="total" type="text" class="input" name="total_price" hidden>
+            <h1>Total : <span id="total1"></span></h1>
+            <button class="book_btn_cta" type="submit">
+                Book
+            </button>
+        </form>
+    </div>
+</div>
+<script>
+    function updateTotal() {
+        const seats = document.getElementById("no").value;
+        document.getElementById("total").value = seats * parseFloat("{{travel_option.price}}");
+        document.getElementById("total1").innerText = seats * parseFloat("{{travel_option.price}}");
+
+    }
+</script>
+{% if message %}
+<div id="box" class="w-full flex justify-center">
+    <div class="bg-orange-100 max-w-xl w-full border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+        <p class="font-bold">{{message}}</p>
+    </div>
+</div>
+<script>
+    setTimeout(() => {
+      const elem = document.getElementById("box");
+      if (elem) {
+        elem.remove();
+      }
+    }, 3000);
+  </script>
+{% endif %}
+{% endblock content %}
