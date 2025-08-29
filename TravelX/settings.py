@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-25)#vx!-#t%wfg*0$i79l!j*3sn=oa%qw*(s@aykmv!2p+ba%q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['travelx-gules.vercel.app/']
+ALLOWED_HOSTS = ['travelx-gules.vercel.app']
 
 
 # Application definition
